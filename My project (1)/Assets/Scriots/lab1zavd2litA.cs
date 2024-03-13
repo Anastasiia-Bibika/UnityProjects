@@ -9,7 +9,7 @@ public class lab1zavd2litA : MonoBehaviour
     public float speed = 5f; 
     public float switchTime = 2f; 
 
-    private Vector3 direction = Vector3.forward; 
+    private Vector3 direction = Vector3.right; 
     private float timer = 0f; 
     void Start()
     {
