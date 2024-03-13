@@ -61,7 +61,6 @@ public class MoveObject : MonoBehaviour
         if (other.CompareTag("Finish"))
         {
             Debug.Log("Finish reached!");
-            // ¬икликаЇмо под≥ю FinishReached
             if (FinishReached != null)
                 FinishReached();
         }
