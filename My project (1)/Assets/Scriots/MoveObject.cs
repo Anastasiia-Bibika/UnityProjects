@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
+using UnityEngine.UI;
 
 public class MoveObject : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class MoveObject : MonoBehaviour
     private bool isGrounded = true;
     public float accelerationTime = 3f; 
     private float currentAccelerationTime = 0f;
+    private int collisionCount = 0;
+    public Text collisionText;
+    public Text completionText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +66,8 @@ public class MoveObject : MonoBehaviour
         if (other.CompareTag("Finish"))
         {
             Debug.Log("Finish reached!");
+            completionText.text = "Рівень завершено!";
+            gameObject.SetActive(true);
             if (FinishReached != null)
                 FinishReached();
         }
@@ -71,5 +78,12 @@ public class MoveObject : MonoBehaviour
         {
             isGrounded = true;
         }
+
+        if (collision.gameObject.CompareTag("Touch"))
+        {
+            collisionCount++;
+            collisionText.text = "Зіткнення: " + collisionCount.ToString();
+        }
+
     }
 }
