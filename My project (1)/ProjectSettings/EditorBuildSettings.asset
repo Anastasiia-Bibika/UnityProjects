@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/labor2.unity
     guid: 68dae36f650db43428ce45faab896b84
+  - enabled: 1
+    path: Assets/Scenes/LoseScene.unity
+    guid: a0866ba4ce2387645b696b5fff0e6b30
   m_configObjects: {}
