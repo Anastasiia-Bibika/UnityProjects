@@ -20,4 +20,12 @@ public class PlayerInventory : MonoBehaviour
     {
         
     }
+
+    //private void OnTriggerEnter(Colider other)
+    //{
+        //if (other.CompareTag("coin"))
+        //{
+            //other.gameObject.SetActive(false);
+        //}
+    //}
 }
